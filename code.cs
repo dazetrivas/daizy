@@ -27,3 +27,9 @@ public class LightControlTrack : TrackAsset
 	        Light trackBinding = director.GetGenericBinding(this) as Light;
 	        if (trackBinding == null)
 	            return;
+ var serializedObject = new UnityEditor.SerializedObject (trackBinding);
+	        var iterator = serializedObject.GetIterator();
+	        while (iterator.NextVisible(true))
+	        {
+	            if (iterator.hasVisibleChildren)
+	                continue;
