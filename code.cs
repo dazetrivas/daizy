@@ -21,7 +21,7 @@ public class LightControlTrack : TrackAsset
 	        return ScriptPlayable<LightControlMixerBehaviour>.Create (graph, inputCount);
 	    }
 
-	    public override void GatherProperties (PlayableDirector director, IPropertyCollector driver)
+	    public override void GatherProperties (PlayableDirector director, IPropertyCollector driver)//hello
 	    {
 	#if UNITY_EDITOR
 	        Light trackBinding = director.GetGenericBinding(this) as Light;
